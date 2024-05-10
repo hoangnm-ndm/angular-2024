@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
@@ -15,6 +15,8 @@ import { Product } from './interfaces/Product';
     HomePageComponent,
     NotFoundPageComponent,
     FormsModule,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
