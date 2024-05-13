@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../interfaces/Product';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,9 +10,12 @@ import { Product } from '../../interfaces/Product';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })
-export class HomePageComponent {
-  products: Product[] = [
-    { id: 1, name: 'xeng?', price: 1000 },
-    { id: 1, name: 'cuoc', price: 2000 },
-  ];
+export class HomePageComponent implements OnInit {
+  products: Product[] | undefined;
+  constructor(private productService: ProductService) {}
+  ngOnInit() {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
+    });
+  }
 }

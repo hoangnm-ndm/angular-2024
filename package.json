@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "concurrently \"json-server --watch db.json --port 3000 -m ./node_modules/json-server-auth\" \"ng serve --open\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "bootstrap": "^5.3.3",
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
