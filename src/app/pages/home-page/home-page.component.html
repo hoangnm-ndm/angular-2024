@@ -1,8 +1,16 @@
 <h1>Home Page</h1>
 <div *ngFor="let product of products">
-  <div><img src="{{ product.thumbnail }}" alt="{{ product.title }}" /></div>
+  <div>
+    <a [routerLink]="['/details', product.id]">
+      <img src="{{ product.thumbnail }}" alt="{{ product.title }}" />
+    </a>
+  </div>
   <div class="content">
-    <h2>{{ product.title | uppercase }}</h2>
+    <h2>
+      <a [routerLink]="['/details', product.id]">
+        {{ product.title | uppercase }}
+      </a>
+    </h2>
     <p>Price: {{ product.price | currency : "USD" : "symbol" : "1.2-2" }}</p>
     <button (click)="addToCart(product)">Add to cart</button>
   </div>
