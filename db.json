@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
       "id": 4,
@@ -549,6 +551,33 @@
         "https://cdn.dummyjson.com/product-images/30/3.jpg",
         "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
       ]
+    },
+    {
+      "id": 31
+    },
+    {
+      "id": 32
+    },
+    {
+      "id": 33
+    },
+    {
+      "id": 34
+    },
+    {
+      "id": 35
+    },
+    {
+      "id": 36
+    },
+    {
+      "id": 37
+    },
+    {
+      "title": "ten",
+      "price": 200,
+      "description": "mo ta",
+      "id": 38
     }
   ],
   "users": []
