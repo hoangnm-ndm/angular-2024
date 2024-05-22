@@ -7,6 +7,7 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { LayoutClientComponent } from './components/layout-client/layout-client.component';
 import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 
 export const routes: Routes = [
   {
@@ -32,14 +33,16 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: LayoutAdminComponent,
-    children: [{ path: '', component: DashboardComponent }],
+    children: [
+      { path: '', component: DashboardComponent },
+      { path: 'product-add', component: ProductAddComponent },
+    ],
   },
 
   {
     path: 'login',
     component: LoginComponent,
   },
-
   {
     path: '**',
     component: NotFoundPageComponent,
