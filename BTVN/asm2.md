@@ -20,9 +20,9 @@
 # 4. Các tính năng phía admin: 4đ
 
 - Danh sách sản phẩm dạng bảng.
-- Thêm sản phẩm mới (bắt buộc bao gồm: tên, giá, mô tả)
-- Sửa sản phẩm.
-- Xóa sản phẩm.
+- Thêm sản phẩm mới (bắt buộc bao gồm: tên, giá không âm, mô tả).
+- Sửa sản phẩm (bắt buộc bao gồm: tên, giá không âm, mô tả).
+- Xóa sản phẩm có confirm.
 
 # 5. Phân quyền: 1đ
 
