@@ -1,4 +1,4 @@
-<form (ngSubmit)="handleSubmit()">
+<form (ngSubmit)="handleSubmit()" [formGroup]="productForm">
   <div class="form-group mb-3">
     <label for="title">Title</label>
     <input
@@ -6,8 +6,7 @@
       type="text"
       placeholder="title"
       id="title"
-      [(ngModel)]="product.title"
-      name="title"
+      formControlName="title"
     />
   </div>
 
@@ -18,8 +17,7 @@
       type="number"
       placeholder="price"
       id="price"
-      [(ngModel)]="product.price"
-      name="price"
+      formControlName="price"
     />
   </div>
 
@@ -30,8 +28,7 @@
       type="text"
       placeholder="description"
       id="description"
-      [(ngModel)]="product.description"
-      name="description"
+      formControlName="description"
     />
   </div>
   <div class="form-group mb-3">
