@@ -6,14 +6,16 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { ProductService } from '../../../product.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-add',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './product-add.component.html',
   styleUrl: './product-add.component.scss',
 })
@@ -26,13 +28,22 @@ export class ProductAddComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.productForm = this.fb.group({
-      title: [''],
-      price: [0],
+      title: ['', [Validators.required, Validators.minLength(3)]],
+      price: [0, [Validators.required, Validators.min(0)]],
       description: [''],
     });
   }
   ngOnInit(): void {}
   handleSubmit() {
-    console.log(this.productForm.value);
+    if (this.productForm.valid) {
+      console.log(this.productForm.value);
+      this.productService
+        .createProduct(this.productForm.value)
+        .subscribe((data) => {
+          console.log('Create product successfully!', data);
+          alert('Create product successfully!');
+          this.router.navigate(['/admin']);
+        });
+    }
   }
 }
