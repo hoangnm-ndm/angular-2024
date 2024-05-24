@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../interfaces/Product';
 import { ProductService } from '../../product.service';
 import { RouterModule } from '@angular/router';
+import { MyCustomizePipePipe } from '../../../pipes/my-customize-pipe.pipe';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MyCustomizePipePipe],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })
