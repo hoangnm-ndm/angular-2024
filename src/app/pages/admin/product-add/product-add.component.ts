@@ -20,7 +20,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-add.component.scss',
 })
 export class ProductAddComponent implements OnInit {
-  product: Product = {} as Product;
+  product: Product = {
+    id: 0,
+    title: '',
+    price: 0,
+    description: '',
+    thumbnail: '',
+  };
   productForm: FormGroup = {} as FormGroup;
   constructor(
     private productService: ProductService,
@@ -41,8 +47,8 @@ export class ProductAddComponent implements OnInit {
         .createProduct(this.productForm.value)
         .subscribe((data) => {
           console.log('Create product successfully!', data);
-          alert('Create product successfully!');
           this.router.navigate(['/admin']);
+          alert('Create product successfully!');
         });
     }
   }
