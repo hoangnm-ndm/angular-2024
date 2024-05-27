@@ -1803,5 +1803,23 @@
       "id": 31
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "hoangnm62@gmail.com",
+      "password": "$2a$10$aw4pPllR9d.cSGqEv2Mh4e.qD8BEAuHkq3ayFNzYbkDSgu68oipea",
+      "id": 1
+    },
+    {
+      "email": "hoangnm63@gmail.com",
+      "password": "$2a$10$vl0oqL7uZfxi2HZ.1VNq2OBumcm3UI3nBSZ80X/4APagIOcfZOCqm",
+      "id": 2
+    },
+    {
+      "email": "hoang@gmail.com",
+      "password": "$2a$10$jP7EY7t7XFjsNfEUi52JseW0s8jiM.4mOngja9Ql1qVfshQCbhlOa",
+      "username": "hoangnm63",
+      "role": "admin",
+      "id": 3
+    }
+  ]
 }
