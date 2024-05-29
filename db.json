@@ -1826,6 +1826,41 @@
       "username": "hoangnm63",
       "role": "admin",
       "id": 3
+    },
+    {
+      "email": "dfsfs@gmail.com",
+      "password": "$2a$10$slXP4j3TY.iw7tF4O5C.MuBXMH2.d.f4YrfDYwHNe0fd6FYBuue3q",
+      "id": 4
+    },
+    {
+      "email": "hoang123@gmail.com",
+      "password": "$2a$10$IYUijIu2jeYv3/Q8lZvuEuNMTVYfej4MneyG/ZsFPyiCDo0PSeUvu",
+      "id": 5
+    },
+    {
+      "email": "hoang00000@gmail.com",
+      "password": "$2a$10$kgjIrhcIPgcocJafzY9/JObBvF53Vw61/lwtvwL2CML3Cp.KwZ..u",
+      "id": 6
+    },
+    {
+      "email": "hoang0000wewewe0@gmail.com",
+      "password": "$2a$10$FZ3poJ0crgjZ9xBcmlvDv.KzU2neIkY0SMoKcbl9FXdHzXjIyAbSG",
+      "id": 7
+    },
+    {
+      "email": "hoang2323232@gmail.com",
+      "password": "$2a$10$tzuKUigp5dEfhSB6VUOlpuuwYtkvxU2gnh5vx68I7Qq5kpNerCMym",
+      "id": 8
+    },
+    {
+      "email": "hoang232asasasas3232@gmail.com",
+      "password": "$2a$10$.lTmCdeoyDPTr4tKHkiDnu3bnRdDHuq.qz8WaeH8nWb75JGx5U78.",
+      "id": 9
+    },
+    {
+      "email": "dsdssdsd@gmail.com",
+      "password": "$2a$10$UsTHaluhod7vvQb6JL/bJ.iiax3PwUyipjMjPPMgHsqTb1r/OPpAC",
+      "id": 10
     }
   ]
 }

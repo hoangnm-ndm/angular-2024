@@ -1,1 +1,50 @@
-<p>register works!</p>
+<form (ngSubmit)="handleSubmit()" [formGroup]="authForm">
+  <h1>Register</h1>
+  <div class="form-group mb-3">
+    <label for="email">Email</label>
+    <input
+      class="form-control"
+      type="email"
+      placeholder="email"
+      id="email"
+      formControlName="email"
+    />
+    <div
+      class="text-danger"
+      *ngIf="authForm.get('email')?.touched && authForm.get('email')?.errors"
+    >
+      <div *ngIf="authForm.get('email')?.errors?.['required']">
+        Email is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="password">Password</label>
+    <input
+      class="form-control"
+      type="password"
+      placeholder="password"
+      id="password"
+      formControlName="password"
+    />
+    <div
+      class="text-danger"
+      *ngIf="
+        authForm.get('password')?.touched && authForm.get('password')?.errors
+      "
+    >
+      <div *ngIf="authForm.get('password')?.errors?.['required']">
+        password is required.
+      </div>
+      <div
+        *ngIf="authForm.get('password')?.errors?.['min'] && authForm.get('password')?.errors?.['min']"
+      >
+        Password must be greater than or equal to 6.
+      </div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <button class="btn btn-primary w-100" type="submit">Submit</button>
+  </div>
+</form>
