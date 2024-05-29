@@ -17,4 +17,12 @@ export class ProductService {
   createProduct(product: Product) {
     return this.http.post(`${this.baseURL}`, product);
   }
+
+  updateProduct(product: Product) {
+    return this.http.put(`${this.baseURL}/${product.id}`, product);
+  }
+
+  removeProduct(id: string | number | undefined) {
+    return this.http.delete(`${this.baseURL}/${id}`);
+  }
 }
