@@ -14,7 +14,9 @@
       <td>{{ p.price }}</td>
       <td><img src="{{ p.thumbnail }}" alt="{{ p.title }}" width="200px" /></td>
       <td>
-        <button class="btn btn-warning">Edit</button>
+        <a class="btn btn-warning" [routerLink]="['/product-edit/', p.id]"
+          >Edit</a
+        >
         <button class="btn btn-danger">Delete</button>
       </td>
     </tr>

@@ -1,0 +1,65 @@
+<form (ngSubmit)="handleSubmit()" [formGroup]="productForm">
+  <div class="form-group mb-3">
+    <label for="title">Title</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="title"
+      id="title"
+      formControlName="title"
+    />
+    <div
+      class="text-danger"
+      *ngIf="
+        productForm.get('title')?.touched && productForm.get('title')?.errors
+      "
+    >
+      <div *ngIf="productForm.get('title')?.errors?.['required']">
+        Title is required.
+      </div>
+      <div *ngIf="productForm.get('title')?.errors?.['minlength']">
+        Title must be at least 3 characters long.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="price">Price</label>
+    <input
+      class="form-control"
+      type="number"
+      placeholder="price"
+      id="price"
+      formControlName="price"
+    />
+    <div
+      class="text-danger"
+      *ngIf="
+        productForm.get('price')?.touched && productForm.get('price')?.errors
+      "
+    >
+      <div *ngIf="productForm.get('price')?.errors?.['required']">
+        Price is required.
+      </div>
+      <div
+        *ngIf="productForm.get('price')?.errors?.['min'] && productForm.get('price')?.errors?.['min']"
+      >
+        Price must be greater than or equal to 0.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="description">Description</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="description"
+      id="description"
+      formControlName="description"
+    />
+  </div>
+  <div class="form-group mb-3">
+    <button class="btn btn-primary w-100" type="submit">Submit</button>
+  </div>
+</form>

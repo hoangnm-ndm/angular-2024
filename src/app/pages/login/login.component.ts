@@ -5,8 +5,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
+  showPassword: boolean = false;
+  showPass = () => {
+    console.log('show');
+    this.showPassword = !this.showPassword;
+  };
+  constructor() {}
 
+  ngOnInit(): void {}
 }

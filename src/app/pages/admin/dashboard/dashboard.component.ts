@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../interfaces/Product';
 import { ProductService } from '../../../product.service';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

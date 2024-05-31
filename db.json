@@ -1807,6 +1807,18 @@
       "price": 2000,
       "description": "sdad",
       "id": 32
+    },
+    {
+      "title": "them",
+      "price": 200,
+      "description": "moi",
+      "id": 33
+    },
+    {
+      "title": "dsdsd",
+      "price": 2323232,
+      "description": "23232323",
+      "id": 34
     }
   ],
   "users": [
@@ -1861,6 +1873,11 @@
       "email": "dsdssdsd@gmail.com",
       "password": "$2a$10$UsTHaluhod7vvQb6JL/bJ.iiax3PwUyipjMjPPMgHsqTb1r/OPpAC",
       "id": 10
+    },
+    {
+      "email": "111@gmail.com",
+      "password": "$2a$10$G.HE5.kaS1FlFPzTLEhBmOTf6cxFlzoXxaYoHxNX8WRP/3BtmXklO",
+      "id": 11
     }
   ]
 }

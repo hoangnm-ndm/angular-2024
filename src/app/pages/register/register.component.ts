@@ -52,6 +52,8 @@ export class RegisterComponent implements OnInit {
       });
     } else {
       console.log('form is not valid!');
+      console.log(this.authForm.invalid);
+      alert('Form is not valid!');
     }
   }
 }

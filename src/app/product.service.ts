@@ -6,7 +6,7 @@ import { Product } from './interfaces/Product';
   providedIn: 'root',
 })
 export class ProductService {
-  private baseURL = 'http://localhost:3000/products';
+  private baseURL = 'https://hoangnm-json.onrender.com/products';
   constructor(private http: HttpClient) {}
   getProducts() {
     return this.http.get<Product[]>(this.baseURL);
@@ -19,7 +19,7 @@ export class ProductService {
   }
 
   updateProduct(product: Product) {
-    return this.http.put(`${this.baseURL}/${product.id}`, product);
+    return this.http.patch(`${this.baseURL}/${product.id}`, product);
   }
 
   removeProduct(id: string | number | undefined) {
