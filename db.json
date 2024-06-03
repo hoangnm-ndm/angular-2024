@@ -1878,6 +1878,11 @@
       "email": "111@gmail.com",
       "password": "$2a$10$G.HE5.kaS1FlFPzTLEhBmOTf6cxFlzoXxaYoHxNX8WRP/3BtmXklO",
       "id": 11
+    },
+    {
+      "email": "thayhoang@gmail.com",
+      "password": "$2a$10$.HXYlrgEzeXrelafc1/3N.GJgh34YmZjiYMS4yPHsMpRepWxMBkPG",
+      "id": 12
     }
   ]
 }
