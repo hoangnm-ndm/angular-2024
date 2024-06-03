@@ -9,6 +9,7 @@ import { LayoutAdminComponent } from './components/layout-admin/layout-admin.com
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -38,6 +39,7 @@ export const routes: Routes = [
       { path: '', component: DashboardComponent },
       { path: 'product-add', component: ProductAddComponent },
     ],
+    canActivate: [AuthGuard],
   },
 
   {
