@@ -6,7 +6,7 @@ import { Product } from './interfaces/Product';
   providedIn: 'root',
 })
 export class ProductService {
-  private baseURL = 'https://hoangnm-json.onrender.com/products';
+  private baseURL = 'http://localhost:3000/products';
   constructor(private http: HttpClient) {}
   getProducts() {
     return this.http.get<Product[]>(this.baseURL);

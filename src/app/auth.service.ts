@@ -6,7 +6,7 @@ import { User } from './interfaces/User';
   providedIn: 'root',
 })
 export class AuthService {
-  private baseURL = 'https://hoangnm-json.onrender.com';
+  private baseURL = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
   register(user: User) {
     return this.http.post(`${this.baseURL}/register`, user);
