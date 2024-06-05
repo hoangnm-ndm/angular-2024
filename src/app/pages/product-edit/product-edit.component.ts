@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../interfaces/Product';
+import { Product } from '../../interfaces/Product';
 import {
-  Form,
   FormBuilder,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ProductService } from '../../../product.service';
-import { Router } from '@angular/router';
+import { ProductService } from '../../product.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-product-add',
+  selector: 'app-product-edit',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
-  templateUrl: './product-add.component.html',
-  styleUrl: './product-add.component.scss',
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './product-edit.component.html',
+  styleUrl: './product-edit.component.scss',
 })
-export class ProductAddComponent implements OnInit {
+export class ProductEditComponent implements OnInit {
   product: Product = {
     id: 0,
     title: '',
@@ -31,7 +29,8 @@ export class ProductAddComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private route: ActivatedRoute
   ) {
     this.productForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
@@ -39,16 +38,22 @@ export class ProductAddComponent implements OnInit {
       description: [''],
     });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const id = this.route.snapshot.params['id'];
+    this.productService.getProductById(id).subscribe((product) => {
+      this.product = product;
+      this.productForm.patchValue(product);
+    });
+  }
   handleSubmit() {
     if (this.productForm.valid) {
       console.log(this.productForm.value);
       this.productService
-        .createProduct(this.productForm.value)
+        .updateProduct(this.productForm.value)
         .subscribe((data) => {
-          console.log('Create product successfully!', data);
+          console.log('Edit product successfully!', data);
           this.router.navigate(['/admin']);
-          alert('Create product successfully!');
+          alert('Edit product successfully!');
         });
     }
   }

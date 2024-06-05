@@ -1,1 +1,16 @@
+<header>
+  <div *ngIf="email; else elseBlock">
+    <p>Welcome {{ email }}</p>
+    <button class="btn btn-danger">Logout</button>
+  </div>
+  <ng-template #elseBlock>
+    <p>Ban chua dang nhap</p>
+  </ng-template>
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/register">Register</a></li>
+  </ul>
+</header>
+
 <router-outlet></router-outlet>

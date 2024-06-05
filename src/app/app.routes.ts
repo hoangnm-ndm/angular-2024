@@ -1,55 +1,14 @@
 import { Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { LayoutClientComponent } from './components/layout-client/layout-client.component';
-import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductAddComponent } from './pages/product-add/product-add.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: LayoutClientComponent,
-    children: [
-      { path: '', component: HomePageComponent },
-      {
-        path: 'home',
-        redirectTo: '/',
-      },
-      {
-        path: 'about',
-        component: AboutPageComponent,
-      },
-      {
-        path: 'details/:id',
-        component: ProductDetailsComponent,
-      },
-    ],
-  },
-
-  {
-    path: 'admin',
-    component: LayoutAdminComponent,
-    children: [
-      { path: '', component: DashboardComponent },
-      { path: 'product-add', component: ProductAddComponent },
-    ],
-  },
-
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundPageComponent,
-  },
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'product-add', component: ProductAddComponent },
+  { path: 'product-edit/:id', component: ProductEditComponent },
 ];

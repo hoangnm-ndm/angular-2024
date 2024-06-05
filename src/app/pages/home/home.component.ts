@@ -1,17 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../interfaces/Product';
-import { ProductService } from '../../../product.service';
 import { RouterModule } from '@angular/router';
+import { Product } from '../../interfaces/Product';
+import { ProductService } from '../../product.service';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [CommonModule, RouterModule],
-
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class DashboardComponent implements OnInit {
+export class HomeComponent implements OnInit {
   products: Product[] = [];
   constructor(private productService: ProductService) {}
 

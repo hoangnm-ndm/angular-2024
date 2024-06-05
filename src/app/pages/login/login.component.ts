@@ -40,8 +40,9 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.authForm.value).subscribe({
         next: (data) => {
           console.log('login successfully!', data);
+          localStorage.setItem('user', JSON.stringify(data));
           if (confirm('login successfully!')) {
-            this.route.navigate(['/admin']);
+            this.route.navigate(['/']);
           }
         },
         error: (err) => {

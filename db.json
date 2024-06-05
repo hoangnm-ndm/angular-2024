@@ -1888,6 +1888,11 @@
       "email": "thayhoangjs@gmail.com",
       "password": "$2a$10$7qS/HTOgXN.rjh4Jzp9areWm5OfYqxETvkwENcZEgsL/RdpHfIrw2",
       "id": 13
+    },
+    {
+      "email": "hoangjs@gmail.com",
+      "password": "$2a$10$FANqhvRzaVZ2.AqQaa5SJe52WJ6e66HDmxftms6JwSIMa4JgSCr6S",
+      "id": 14
     }
   ]
 }
